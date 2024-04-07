@@ -24,10 +24,10 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #555;
 }
 
-h1, h2, p, ul {
+h1, h2, h3, p, div, footer {
     margin: 20px;
     padding: 0;
 }
@@ -35,7 +35,6 @@ h1, h2, p, ul {
 div {
     background-color: #fff;
     padding: 20px;
-    margin: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -49,21 +48,24 @@ ul li {
     margin-bottom: 10px;
 }
 
-ul li a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-footer{
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px 0;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    
     bottom: 0;
     width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px;
+    }
 }
